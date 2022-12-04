@@ -1,0 +1,139 @@
+:root {
+    --fontColor: #222;
+    --secondaryColor: hsl(194, 95%, 33%); 
+    --darkShade1: hsl(194, 95%, 13%); 
+    --darkShade2: hsl(194, 95%, 23%); 
+    --lightShade1: hsl(194, 95%, 53%);  
+    --lightShade2: hsl(194, 95%, 73%); ; 
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--fontColor);
+    background-color: #222;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 95%;
+    background-color: var(--secondaryColor);
+}
+
+#bio {
+    margin: 2rem auto 0 auto;
+    width: 90%;
+    border-bottom: 1px solid var(--lightShade2);  
+}
+
+#bio-pic {
+    float: left;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    margin-right: 5%;
+    border: 2px solid var(--lightShade2);
+}
+
+#grid {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--lightShade2);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "grid-item-1"
+    "grid-item-2" 
+    "grid-item-3"
+    "grid-item-4" 
+    "grid-item-5"
+    ;
+}
+
+#grid img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid var(--lightShade2);
+    margin: 0;
+}
+
+
+.grid-item-1 {
+    grid-area: grid-item-1;
+    max-width: 400px;
+}
+.grid-item-2 {
+    grid-area: grid-item-2;
+}
+.grid-item-3 {
+    grid-area: grid-item-3;
+}
+.grid-item-4 {
+    grid-area: grid-item-4;
+}
+.grid-item-5 {
+    grid-area: grid-item-5;
+}
+
+
+
+
+header {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkShade1);
+    align-items: center;
+    color: #eee;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+a {
+    color: #eee;
+    padding: 0 1rem;
+    text-decoration: none;
+}
+
+h3 {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--darkShade1);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+h4 {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    margin: 2rem 0;
+}
