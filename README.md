@@ -15,7 +15,7 @@ A Front-End Developer portfolio serves to showcase your skills, past projects, a
 
 ## Screenshots
 ### Site Mobile
-![Mobile](assets/readme-images/responsive-mobile.png)
+![Mobile](my-portfolio/assets/readme-images/responsive-mobile.png)
 
 ### Site Tablet
  ![Tablet](my-portfolio/assets/readme images/responsive-tablet.png)
