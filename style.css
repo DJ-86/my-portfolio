@@ -1,13 +1,13 @@
 :root {
     --fontColor: #222;
-    --darkest: #023241; 
-    --dark: #035872; 
-    --light: #15c4f9;  
-    --lightest: #79ddfc;
+    --darkest: hsl(0, 88%, 28%);  
+    --dark: hsl(0, 88%, 38%); 
+    --light: hsl(0, 88%, 48%);  
+    --lightest:hsl(0, 88%, 58%); 
     --lightBorder: 2px solid var(--lightest);
     --darkBorder: 2px solid var(--dark);
 }
-
+/* reset to default styling */
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +22,11 @@ body {
     align-items: center;
     background-color: #222;
     font-family: 'Roboto', sans-serif;
-    max-width: 1280px;
+    background-image: url(assets/abstract-gdf5de0df8_1920.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #eee;
 }
 
 main {
@@ -30,16 +34,12 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://images.unsplash.com/photo-1651488829517-95af02975dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #bio {
     margin: 2rem auto 0 auto;
     width: 90%;
     padding-bottom: 2rem;
-    border-bottom: var(--lightBorder);  
 }
 
 #bio-pic {
@@ -53,28 +53,30 @@ main {
     height: 25%;
     right: 20px;
     border-radius: 50%;
-    margin-right: 5%;
     border: var(--darkBorder);
 }
 
 #grid-container {
     width: 100%;
-    border-top: var(--lightBorder);
-    border-bottom: var(--lightBorder);
+
+    border-bottom: var(--darkBorder);
     display: flex;
     justify-content: center;
-    background-color: var(--dark);
 }
 
 #grid {
     width: 75%;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: var(--lightBorder);
+    margin: 2rem 0;
+    padding: 2rem;
+    
     display: grid;
     justify-items: center;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 100%;
+    border: var(--darkBorder);
+    background-color: #222;
+    border-radius: 5px;
+
 }
 
 .overlay {
@@ -91,7 +93,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: var(--lightBorder);
+    border: 1px solid var(--dark);
 }
 
 #grid-item-1 {
@@ -124,7 +126,8 @@ header {
     display: flex;
     flex-direction: column;
     padding-top: 0.5rem;
-    background-color: var(--darkest);
+    background-color: var(--dark);
+    border-bottom: 2px #222;
     align-items: center;
     color: #eee;
 }
@@ -133,6 +136,10 @@ header ul {
     display: flex;
     list-style-type: none;
     padding: 0.5rem;
+    border: 2px solid transparent;
+    background-color: #222;
+    border-radius: 5px;
+    margin: 1rem 0 1rem 0;
 }
 
 a {
@@ -142,38 +149,40 @@ a {
 }
 
 #project-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     margin-top: 2rem;
-    text-align: center;
     color: var(--fontColor);
     font-size: 1.4rem;
     padding: 0.2rem 2rem;
-    background-color: var(--light);
-    border-top: var(--darkBorder);
-    border-bottom: var(--darkBorder);
+    background-color: var(--dark);
+}
+
+h1 {
+    background-color: #222;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    color: #eee;
 }
 
 h3 {
+    text-align: center;
+    width: 100%;
     font-size: 1.4rem;
+    background-color: #222;
+    color:#eee;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
 }
 
 h4 {
     font-size: 0.6rem;
 }
 
-h5 {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    vertical-align: center;
-    margin: auto;
-    color: white;
-    font-size: 2rem;
-    
-}
-
 p {
-    background-color: var(--light);
+    background-color: #222;
     margin-top: 2rem;
     font-size: 1.2rem;
     padding: 2rem 1rem;
@@ -194,7 +203,7 @@ footer ul {
     #grid {
         width: 90%;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     #grid-item-1 {
@@ -235,10 +244,10 @@ footer ul {
 @media only screen and (min-width: 1024px) {
 
     #grid {
-        width: 60%;
+        width:70%;
         text-align: center;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 
     .overlay {
@@ -282,6 +291,6 @@ footer ul {
 
     #grid img:hover {
         transition: all 0.3s;
-        background-color: var(--light);
+        background-color: var(--fontColor);
     }
 }
